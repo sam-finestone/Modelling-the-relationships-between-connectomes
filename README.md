@@ -21,9 +21,13 @@ To build an understanding of the full structural connectivity map there are a fe
 Next, the relationship between structural and functional connectomes is explored by using various linear models to predict functional connectivity weights, fij between regions i and j from the structural connectivity weights, sij. The sparse nature of the structural connectivity matrix is taken into account by considering indirect structural connectivity weights, tij, which represent connections between two regions that pass through one middle region first. These connections are computed by using the equation tij = maxk(min(sik, skj)), where sij, skj ̸= 0. The linear models are applied to the data with and without these indirect connections.
 
 $$f_{ij} = \alpha_{ij} + \beta_{ij}s_{ij}$$
+
 $$f_{ij} = \alpha_{ij} + \beta_{ij}s_{ij} + \gamma_{ij} s_{ij}^{2}$$
+
 $$f_{ij} = \alpha_{ij} + \beta_{ij}+ t_{ij}$$
+
 $$f_{ij} = \alpha_{ij} + \beta_{ij}+ t_{ij} + \gamma_{ij} t_{ij}^{2}$$
+
 $$f_{ij} = \alpha_{ij} + \beta_{ij}+ t_{ij} + \gamma_{ij} t_{ij}$$
 
 
