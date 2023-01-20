@@ -6,9 +6,13 @@ In recent years, understanding how the brain functions has been a focus of inten
 
 To build an understanding of the full structural connectivity map there are a few steps required to obtain a detailed graphical representation of the brain’s structure. I use high resolution structural MRI images, parcelate the cortex into anatomically sub-regions, and then use tractography to assemble edges between each pair of regions into an abstract graph. In this project I will be using a dataset with a set of multi-modal imaging data from a single healthy adult and structural connectomes derived using different anisotropy thresholds. The pre-processing of the MRI imaging was done by the TractoR software package. The most important files used to reconstruct a structural connectome are listed.
 
-
-
-
-
-
-Exploration of the relationship between structural and functional connectomes by using different linear models to predict functional connectivity weights, fij between the regions i and j from the structural connectivity weights, sij
+,,,
+- structural/refT1.nii.gz: T1-weighted structural image
+- structural/parcellation.nii.gz: A cortical parcellation, where each voxel is labelled with a cortical region (int)
+- structural/parcellation.lut: A table of information about the labelled regions in the parcellation
+- diffusion/data.nii.gz: The dMRI dataset, a 4D volume with gradient direction varying along the fourth dimension
+- diffusion/dti FA.nii.gz: A map of fractional anisotropy
+- diffusion/parcellation.nii.gz: The same parcellation as above but translated for the diffusion data
+- functional/data.nii.gz: The rs-fMRI dataset, a 4D volume with time varying along the fourth dimension to align the individual volumes and apply temporal filtering 
+- functional/parcellation.nii.gz: The same parcellation as above, converted for the functional data
+,,,
