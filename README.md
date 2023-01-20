@@ -30,4 +30,8 @@ $$f_{ij} = \alpha_{ij} + \beta_{ij}+ t_{ij} + \gamma_{ij} t_{ij}^{2}$$
 
 $$f_{ij} = \alpha_{ij} + \beta_{ij}+ t_{ij} + \gamma_{ij} t_{ij}$$
 
+# Core Task 3: An Advance Task 
 
+To further understand the complexity of the interconnections between different regions of the brain, an analysis of the structural and functional connectivity graphs is conducted, with a focus on the density of each vertex.
+
+To model the relationship between structural and functional connectivity maps, LASSO is used as the model due to the sparse nature of the structural connectivity graph. LASSO is a linear regression that uses a shrinking parameter, λ, to penalize the loss function and encourage simpler models with small weights. The aim is to relate each functional connection to a subset of structural connections. The method is implemented using a 3-fold cross validation and iterating over every functional connection with a lasso regression. Where, the lowest λ in the array will act closer to an OLS approach. The average of the SSE across all voxels is computed to be 0.07848 over all 3 folds, which is low and suggests that the LASSO approach is a good performing model.
